@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <rect width="200" height="150" fill="#1a1a24"/>
+  <!-- Ground line -->
+  <line x1="20" y1="115" x2="180" y2="115" stroke="#3f3f46" stroke-width="2"/>
+  <!-- Person in plank -->
+  <g stroke="#6366f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head -->
+    <circle cx="45" cy="65" r="12" fill="#4f46e5"/>
+    <!-- Torso - straight line -->
+    <line x1="55" y1="70" x2="145" y2="80"/>
+    <!-- Forearms on ground -->
+    <line x1="60" y1="73" x2="55" y2="90"/>
+    <line x1="55" y1="90" x2="55" y2="113"/>
+    <circle cx="55" cy="113" r="3" fill="#6366f1"/>
+    <line x1="90" y1="76" x2="90" y2="113"/>
+    <circle cx="90" cy="113" r="3" fill="#6366f1"/>
+    <!-- Legs -->
+    <line x1="145" y1="80" x2="170" y2="85"/>
+    <line x1="170" y1="85" x2="178" y2="113"/>
+    <circle cx="178" cy="113" r="4" fill="#6366f1"/>
+  </g>
+  <!-- Hold indicator -->
+  <text x="100" y="50" fill="#10b981" font-size="14" font-family="sans-serif" text-anchor="middle">HOLD</text>
+  <!-- Core highlight -->
+  <ellipse cx="100" cy="78" rx="25" ry="8" stroke="#10b981" stroke-width="1.5" fill="none" stroke-dasharray="4,2"/>
+</svg>

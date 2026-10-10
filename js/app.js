@@ -1,4 +1,4 @@
-// FitFlow App - Main Application Logic
+// Fitness App - Main Application Logic
 
 const App = {
   currentScreen: 'today',
@@ -412,6 +412,23 @@ const App = {
     
     document.getElementById('exerciseDetailMistakes').innerHTML = 
       exercise.mistakes.map(mistake => `<li>${mistake}</li>`).join('');
+
+    const videoContainer = document.getElementById('exerciseVideoLink');
+    if (videoContainer) {
+      if (exercise.video) {
+        videoContainer.innerHTML = `
+          <a href="${exercise.video}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full video-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            Watch How-to Video
+          </a>
+        `;
+        videoContainer.classList.remove('hidden');
+      } else {
+        videoContainer.classList.add('hidden');
+      }
+    }
 
     document.getElementById('exerciseDetailModal').classList.remove('hidden');
   },

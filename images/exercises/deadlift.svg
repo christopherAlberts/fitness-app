@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <rect width="200" height="150" fill="#1a1a24"/>
+  <!-- Ground line -->
+  <line x1="20" y1="135" x2="180" y2="135" stroke="#3f3f46" stroke-width="2"/>
+  <!-- Person in deadlift top position -->
+  <g stroke="#6366f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head -->
+    <circle cx="100" cy="25" r="12" fill="#4f46e5"/>
+    <!-- Neck -->
+    <line x1="100" y1="37" x2="100" y2="45"/>
+    <!-- Torso upright -->
+    <line x1="100" y1="45" x2="100" y2="85"/>
+    <!-- Arms straight down holding bar -->
+    <line x1="100" y1="50" x2="80" y2="50"/>
+    <line x1="80" y1="50" x2="75" y2="95"/>
+    <line x1="100" y1="50" x2="120" y2="50"/>
+    <line x1="120" y1="50" x2="125" y2="95"/>
+    <!-- Legs -->
+    <line x1="100" y1="85" x2="85" y2="110"/>
+    <line x1="85" y1="110" x2="80" y2="135"/>
+    <circle cx="80" cy="135" r="4" fill="#6366f1"/>
+    <line x1="100" y1="85" x2="115" y2="110"/>
+    <line x1="115" y1="110" x2="120" y2="135"/>
+    <circle cx="120" cy="135" r="4" fill="#6366f1"/>
+  </g>
+  <!-- Barbell at hip level -->
+  <line x1="45" y1="95" x2="155" y2="95" stroke="#a1a1aa" stroke-width="4"/>
+  <!-- Weight plates -->
+  <ellipse cx="45" cy="95" rx="8" ry="20" fill="#ef4444"/>
+  <ellipse cx="155" cy="95" rx="8" ry="20" fill="#ef4444"/>
+  <!-- Movement arrow -->
+  <path d="M170 75 L170 60 M165 65 L170 60 L175 65" stroke="#10b981" stroke-width="2" fill="none"/>
+</svg>

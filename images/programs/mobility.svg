@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <defs>
+    <linearGradient id="mobilityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="120" fill="url(#mobilityGrad)" rx="16"/>
+  <!-- Yoga mat pattern -->
+  <rect x="250" y="85" width="130" height="20" rx="3" fill="white" opacity="0.15"/>
+  <!-- Person in stretch pose -->
+  <g fill="white" opacity="0.9">
+    <!-- Head -->
+    <circle cx="280" cy="55" r="10"/>
+    <!-- Body in seated forward fold -->
+    <path d="M280 65 L290 75 L340 75 L340 80 L285 80 L275 70 L280 65Z"/>
+    <!-- Legs extended -->
+    <path d="M290 75 L340 85 L380 85 L380 90 L338 90 L285 82"/>
+    <!-- Arms reaching forward -->
+    <path d="M285 72 L350 72 L370 75 L370 70 L350 68 L285 68"/>
+  </g>
+  <!-- Flow lines -->
+  <path d="M320 45 Q340 35 360 45 Q380 55 360 65" stroke="white" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M330 40 Q350 30 370 40" stroke="white" stroke-width="2" fill="none" opacity="0.3"/>
+  <!-- Text -->
+  <text x="30" y="50" fill="white" font-size="28" font-weight="bold" font-family="system-ui, sans-serif">Mobility</text>
+  <text x="30" y="75" fill="white" font-size="14" opacity="0.8" font-family="system-ui, sans-serif">Warm-ups, Stretches, Hip & Ankle Work</text>
+</svg>

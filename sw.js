@@ -1,5 +1,5 @@
-// FitFlow Service Worker
-const CACHE_NAME = 'fitflow-v1';
+// Fitness App Service Worker
+const CACHE_NAME = 'fitness-app-v2';
 const BASE_PATH = '/fitness-app';
 
 const ASSETS_TO_CACHE = [
@@ -11,6 +11,7 @@ const ASSETS_TO_CACHE = [
   `${BASE_PATH}/js/data.js`,
   `${BASE_PATH}/js/storage.js`,
   `${BASE_PATH}/js/app.js`,
+  // App icons
   `${BASE_PATH}/icons/icon-72.png`,
   `${BASE_PATH}/icons/icon-96.png`,
   `${BASE_PATH}/icons/icon-128.png`,
@@ -20,7 +21,43 @@ const ASSETS_TO_CACHE = [
   `${BASE_PATH}/icons/icon-384.png`,
   `${BASE_PATH}/icons/icon-512.png`,
   `${BASE_PATH}/icons/icon-maskable-192.png`,
-  `${BASE_PATH}/icons/icon-maskable-512.png`
+  `${BASE_PATH}/icons/icon-maskable-512.png`,
+  // Exercise illustrations
+  `${BASE_PATH}/images/exercises/pushup.svg`,
+  `${BASE_PATH}/images/exercises/bench_press.svg`,
+  `${BASE_PATH}/images/exercises/dumbbell_row.svg`,
+  `${BASE_PATH}/images/exercises/overhead_press.svg`,
+  `${BASE_PATH}/images/exercises/pull_up.svg`,
+  `${BASE_PATH}/images/exercises/bicep_curl.svg`,
+  `${BASE_PATH}/images/exercises/tricep_dip.svg`,
+  `${BASE_PATH}/images/exercises/plank.svg`,
+  `${BASE_PATH}/images/exercises/squat.svg`,
+  `${BASE_PATH}/images/exercises/deadlift.svg`,
+  `${BASE_PATH}/images/exercises/lunge.svg`,
+  `${BASE_PATH}/images/exercises/romanian_deadlift.svg`,
+  `${BASE_PATH}/images/exercises/leg_press.svg`,
+  `${BASE_PATH}/images/exercises/calf_raise.svg`,
+  `${BASE_PATH}/images/exercises/glute_bridge.svg`,
+  `${BASE_PATH}/images/exercises/dead_bug.svg`,
+  `${BASE_PATH}/images/exercises/russian_twist.svg`,
+  `${BASE_PATH}/images/exercises/mountain_climber.svg`,
+  `${BASE_PATH}/images/exercises/burpee.svg`,
+  `${BASE_PATH}/images/exercises/hip_flexor_stretch.svg`,
+  `${BASE_PATH}/images/exercises/pigeon_pose.svg`,
+  `${BASE_PATH}/images/exercises/hamstring_stretch.svg`,
+  `${BASE_PATH}/images/exercises/quad_stretch.svg`,
+  `${BASE_PATH}/images/exercises/calf_stretch.svg`,
+  `${BASE_PATH}/images/exercises/shoulder_stretch.svg`,
+  `${BASE_PATH}/images/exercises/chest_stretch.svg`,
+  `${BASE_PATH}/images/exercises/cat_cow.svg`,
+  `${BASE_PATH}/images/exercises/ankle_circles.svg`,
+  `${BASE_PATH}/images/exercises/world_greatest_stretch.svg`,
+  `${BASE_PATH}/images/exercises/leg_swing.svg`,
+  // Program header images
+  `${BASE_PATH}/images/programs/running.svg`,
+  `${BASE_PATH}/images/programs/trail.svg`,
+  `${BASE_PATH}/images/programs/weights.svg`,
+  `${BASE_PATH}/images/programs/mobility.svg`
 ];
 
 // Install event - cache assets
@@ -56,12 +93,10 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
-  // Skip non-GET requests
   if (event.request.method !== 'GET') {
     return;
   }
 
-  // Skip chrome-extension and other non-http requests
   if (!event.request.url.startsWith('http')) {
     return;
   }
@@ -75,15 +110,12 @@ self.addEventListener('fetch', (event) => {
 
         return fetch(event.request)
           .then((response) => {
-            // Don't cache non-successful responses
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
 
-            // Clone the response
             const responseToCache = response.clone();
 
-            // Cache the fetched response
             caches.open(CACHE_NAME)
               .then((cache) => {
                 cache.put(event.request, responseToCache);
@@ -92,7 +124,6 @@ self.addEventListener('fetch', (event) => {
             return response;
           })
           .catch(() => {
-            // Return offline fallback for navigation requests
             if (event.request.mode === 'navigate') {
               return caches.match(`${BASE_PATH}/index.html`);
             }

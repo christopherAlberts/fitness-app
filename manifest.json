@@ -1,6 +1,6 @@
 {
-  "name": "FitFlow - Fitness Tracker",
-  "short_name": "FitFlow",
+  "name": "Fitness App",
+  "short_name": "Fitness App",
   "description": "Your personal fitness companion for running, trail running, weightlifting and mobility training",
   "start_url": "/fitness-app/",
   "scope": "/fitness-app/",

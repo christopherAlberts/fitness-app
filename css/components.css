@@ -719,3 +719,21 @@
   color: var(--primary-light);
   text-decoration: none;
 }
+
+/* Video Link Button */
+.video-link {
+  margin-top: 8px;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  border: none;
+  color: white;
+}
+
+.video-link:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+.video-link svg {
+  width: 18px;
+  height: 18px;
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <rect width="200" height="150" fill="#1a1a24"/>
+  <!-- Ground line -->
+  <line x1="20" y1="125" x2="180" y2="125" stroke="#3f3f46" stroke-width="2"/>
+  <!-- Person in world's greatest stretch -->
+  <g stroke="#6366f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head turned up -->
+    <circle cx="75" cy="55" r="9" fill="#4f46e5"/>
+    <!-- Torso in lunge with rotation -->
+    <line x1="80" y1="62" x2="100" y2="90"/>
+    <!-- Left arm down to ground -->
+    <line x1="90" y1="75" x2="65" y2="95"/>
+    <line x1="65" y1="95" x2="55" y2="123"/>
+    <circle cx="55" cy="123" r="3" fill="#6366f1"/>
+    <!-- Right arm reaching up (rotation) -->
+    <line x1="90" y1="75" x2="75" y2="45"/>
+    <line x1="75" y1="45" x2="60" y2="25"/>
+    <!-- Front leg in deep lunge -->
+    <line x1="100" y1="90" x2="75" y2="105"/>
+    <line x1="75" y1="105" x2="70" y2="123"/>
+    <circle cx="70" cy="123" r="4" fill="#6366f1"/>
+    <!-- Back leg extended -->
+    <line x1="100" y1="90" x2="145" y2="100"/>
+    <line x1="145" y1="100" x2="170" y2="123"/>
+    <circle cx="170" cy="123" r="4" fill="#6366f1"/>
+  </g>
+  <!-- Rotation indicator -->
+  <path d="M50 35 Q40 50 55 60" stroke="#10b981" stroke-width="2" fill="none"/>
+  <path d="M52 57 L55 63 L60 58" stroke="#10b981" stroke-width="2" fill="none"/>
+  <!-- Multiple stretch zones -->
+  <ellipse cx="85" cy="100" rx="10" ry="6" stroke="#10b981" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+  <ellipse cx="90" cy="78" rx="8" ry="12" stroke="#10b981" stroke-width="1.5" fill="none" stroke-dasharray="3,2" transform="rotate(-20 90 78)"/>
+</svg>
