@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <rect width="200" height="150" fill="#1a1a24"/>
+  <!-- Dip bars -->
+  <rect x="50" y="50" width="8" height="90" fill="#3f3f46"/>
+  <rect x="142" y="50" width="8" height="90" fill="#3f3f46"/>
+  <line x1="45" y1="50" x2="65" y2="50" stroke="#a1a1aa" stroke-width="4"/>
+  <line x1="135" y1="50" x2="165" y2="50" stroke="#a1a1aa" stroke-width="4"/>
+  <!-- Person doing dip -->
+  <g stroke="#6366f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head -->
+    <circle cx="100" cy="35" r="12" fill="#4f46e5"/>
+    <!-- Neck -->
+    <line x1="100" y1="47" x2="100" y2="53"/>
+    <!-- Torso -->
+    <line x1="100" y1="53" x2="100" y2="95"/>
+    <!-- Arms on bars -->
+    <line x1="100" y1="58" x2="70" y2="50"/>
+    <circle cx="62" cy="50" r="3" fill="#6366f1"/>
+    <line x1="100" y1="58" x2="130" y2="50"/>
+    <circle cx="138" cy="50" r="3" fill="#6366f1"/>
+    <!-- Legs bent -->
+    <line x1="100" y1="95" x2="90" y2="115"/>
+    <line x1="90" y1="115" x2="95" y2="135"/>
+    <line x1="100" y1="95" x2="110" y2="115"/>
+    <line x1="110" y1="115" x2="105" y2="135"/>
+  </g>
+  <!-- Movement arrow -->
+  <path d="M100 20 L100 10" stroke="#10b981" stroke-width="2" fill="none"/>
+  <path d="M95 15 L100 10 L105 15" stroke="#10b981" stroke-width="2" fill="none"/>
+</svg>

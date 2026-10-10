@@ -1,5 +1,6 @@
 // Exercise and Program Data
-// Exercise images from wger.de (CC-BY-SA) with attribution
+// Exercise illustrations created for this app
+// Video links to reputable fitness channels (YouTube)
 
 const EXERCISES = [
   // Upper Body - Chest
@@ -8,7 +9,8 @@ const EXERCISES = [
     name: 'Push-up',
     category: 'upper',
     muscles: ['Chest', 'Triceps', 'Shoulders'],
-    image: null,
+    image: '/fitness-app/images/exercises/pushup.svg',
+    video: 'https://www.youtube.com/watch?v=IODxDxX7oi4',
     steps: [
       'Start in a plank position with hands slightly wider than shoulder-width',
       'Keep your body in a straight line from head to heels',
@@ -31,7 +33,8 @@ const EXERCISES = [
     name: 'Bench Press',
     category: 'upper',
     muscles: ['Chest', 'Triceps', 'Shoulders'],
-    image: null,
+    image: '/fitness-app/images/exercises/bench_press.svg',
+    video: 'https://www.youtube.com/watch?v=rT7DgCr-3pg',
     steps: [
       'Lie on bench with feet flat on floor',
       'Grip bar slightly wider than shoulder-width',
@@ -54,7 +57,8 @@ const EXERCISES = [
     name: 'Dumbbell Row',
     category: 'upper',
     muscles: ['Back', 'Biceps', 'Rear Delts'],
-    image: null,
+    image: '/fitness-app/images/exercises/dumbbell_row.svg',
+    video: 'https://www.youtube.com/watch?v=roCP6wCXPqo',
     steps: [
       'Place one knee and hand on bench, other foot on floor',
       'Hold dumbbell in free hand, arm extended',
@@ -77,7 +81,8 @@ const EXERCISES = [
     name: 'Overhead Press',
     category: 'upper',
     muscles: ['Shoulders', 'Triceps', 'Upper Chest'],
-    image: null,
+    image: '/fitness-app/images/exercises/overhead_press.svg',
+    video: 'https://www.youtube.com/watch?v=2yjwXTZQDDI',
     steps: [
       'Stand with feet shoulder-width apart, bar at shoulder level',
       'Grip bar just outside shoulders',
@@ -100,7 +105,8 @@ const EXERCISES = [
     name: 'Pull-up',
     category: 'upper',
     muscles: ['Back', 'Biceps', 'Core'],
-    image: null,
+    image: '/fitness-app/images/exercises/pull_up.svg',
+    video: 'https://www.youtube.com/watch?v=eGo4IYlbE5g',
     steps: [
       'Hang from bar with palms facing away, hands shoulder-width apart',
       'Engage core and squeeze shoulder blades together',
@@ -123,7 +129,8 @@ const EXERCISES = [
     name: 'Bicep Curl',
     category: 'upper',
     muscles: ['Biceps', 'Forearms'],
-    image: null,
+    image: '/fitness-app/images/exercises/bicep_curl.svg',
+    video: 'https://www.youtube.com/watch?v=ykJmrZ5v0Oo',
     steps: [
       'Stand holding dumbbells at sides, palms forward',
       'Keep elbows close to torso',
@@ -146,7 +153,8 @@ const EXERCISES = [
     name: 'Tricep Dip',
     category: 'upper',
     muscles: ['Triceps', 'Chest', 'Shoulders'],
-    image: null,
+    image: '/fitness-app/images/exercises/tricep_dip.svg',
+    video: 'https://www.youtube.com/watch?v=6kALZikXxLc',
     steps: [
       'Grip parallel bars and lift yourself up with arms extended',
       'Keep elbows close to body',
@@ -169,7 +177,8 @@ const EXERCISES = [
     name: 'Plank',
     category: 'core',
     muscles: ['Core', 'Shoulders', 'Glutes'],
-    image: null,
+    image: '/fitness-app/images/exercises/plank.svg',
+    video: 'https://www.youtube.com/watch?v=ASdvN_XEl_c',
     steps: [
       'Start in forearm plank position',
       'Elbows directly under shoulders',
@@ -193,7 +202,8 @@ const EXERCISES = [
     name: 'Barbell Squat',
     category: 'lower',
     muscles: ['Quadriceps', 'Glutes', 'Hamstrings'],
-    image: null,
+    image: '/fitness-app/images/exercises/squat.svg',
+    video: 'https://www.youtube.com/watch?v=ultWZbUMPL8',
     steps: [
       'Position bar on upper back, feet shoulder-width apart',
       'Brace core and begin descent by pushing hips back',
@@ -216,7 +226,8 @@ const EXERCISES = [
     name: 'Deadlift',
     category: 'lower',
     muscles: ['Hamstrings', 'Glutes', 'Back', 'Core'],
-    image: null,
+    image: '/fitness-app/images/exercises/deadlift.svg',
+    video: 'https://www.youtube.com/watch?v=op9kVnSso6Q',
     steps: [
       'Stand with feet hip-width, bar over mid-foot',
       'Hinge at hips, grip bar just outside legs',
@@ -239,7 +250,8 @@ const EXERCISES = [
     name: 'Walking Lunge',
     category: 'lower',
     muscles: ['Quadriceps', 'Glutes', 'Hamstrings'],
-    image: null,
+    image: '/fitness-app/images/exercises/lunge.svg',
+    video: 'https://www.youtube.com/watch?v=L8fvypPrzzs',
     steps: [
       'Stand tall with feet together',
       'Step forward into a lunge position',
@@ -262,7 +274,8 @@ const EXERCISES = [
     name: 'Romanian Deadlift',
     category: 'lower',
     muscles: ['Hamstrings', 'Glutes', 'Lower Back'],
-    image: null,
+    image: '/fitness-app/images/exercises/romanian_deadlift.svg',
+    video: 'https://www.youtube.com/watch?v=7j-2w4-P14I',
     steps: [
       'Hold bar or dumbbells at hip level',
       'Push hips back while keeping slight knee bend',
@@ -285,7 +298,8 @@ const EXERCISES = [
     name: 'Leg Press',
     category: 'lower',
     muscles: ['Quadriceps', 'Glutes', 'Hamstrings'],
-    image: null,
+    image: '/fitness-app/images/exercises/leg_press.svg',
+    video: 'https://www.youtube.com/watch?v=IZxyjW7MPJQ',
     steps: [
       'Sit in machine with back flat against pad',
       'Place feet shoulder-width on platform',
@@ -308,7 +322,8 @@ const EXERCISES = [
     name: 'Calf Raise',
     category: 'lower',
     muscles: ['Calves'],
-    image: null,
+    image: '/fitness-app/images/exercises/calf_raise.svg',
+    video: 'https://www.youtube.com/watch?v=gwLzBJYoWlI',
     steps: [
       'Stand on edge of step with heels hanging off',
       'Hold wall or rail for balance',
@@ -331,7 +346,8 @@ const EXERCISES = [
     name: 'Glute Bridge',
     category: 'lower',
     muscles: ['Glutes', 'Hamstrings', 'Core'],
-    image: null,
+    image: '/fitness-app/images/exercises/glute_bridge.svg',
+    video: 'https://www.youtube.com/watch?v=OUgsJ8-Vi0E',
     steps: [
       'Lie on back with knees bent, feet flat',
       'Arms at sides, palms down',
@@ -355,7 +371,8 @@ const EXERCISES = [
     name: 'Dead Bug',
     category: 'core',
     muscles: ['Core', 'Hip Flexors'],
-    image: null,
+    image: '/fitness-app/images/exercises/dead_bug.svg',
+    video: 'https://www.youtube.com/watch?v=I5xbsA71v1A',
     steps: [
       'Lie on back with arms extended to ceiling',
       'Lift legs with knees at 90 degrees',
@@ -378,7 +395,8 @@ const EXERCISES = [
     name: 'Russian Twist',
     category: 'core',
     muscles: ['Obliques', 'Core'],
-    image: null,
+    image: '/fitness-app/images/exercises/russian_twist.svg',
+    video: 'https://www.youtube.com/watch?v=wkD8rjkodUI',
     steps: [
       'Sit with knees bent, lean back slightly',
       'Hold weight at chest or clasp hands',
@@ -401,7 +419,8 @@ const EXERCISES = [
     name: 'Mountain Climber',
     category: 'cardio',
     muscles: ['Core', 'Hip Flexors', 'Shoulders'],
-    image: null,
+    image: '/fitness-app/images/exercises/mountain_climber.svg',
+    video: 'https://www.youtube.com/watch?v=nmwgirgXLYM',
     steps: [
       'Start in push-up position',
       'Drive one knee toward chest',
@@ -424,7 +443,8 @@ const EXERCISES = [
     name: 'Burpee',
     category: 'cardio',
     muscles: ['Full Body'],
-    image: null,
+    image: '/fitness-app/images/exercises/burpee.svg',
+    video: 'https://www.youtube.com/watch?v=JZQA08SlJnM',
     steps: [
       'Stand with feet shoulder-width apart',
       'Squat down and place hands on floor',
@@ -448,7 +468,8 @@ const EXERCISES = [
     name: 'Hip Flexor Stretch',
     category: 'stretch',
     muscles: ['Hip Flexors', 'Quadriceps'],
-    image: null,
+    image: '/fitness-app/images/exercises/hip_flexor_stretch.svg',
+    video: 'https://www.youtube.com/watch?v=YQmpO9VT2X4',
     steps: [
       'Kneel on one knee, other foot forward',
       'Keep torso upright',
@@ -471,7 +492,8 @@ const EXERCISES = [
     name: 'Pigeon Pose',
     category: 'stretch',
     muscles: ['Glutes', 'Hip Rotators'],
-    image: null,
+    image: '/fitness-app/images/exercises/pigeon_pose.svg',
+    video: 'https://www.youtube.com/watch?v=UWIYsL5ewug',
     steps: [
       'From hands and knees, bring one knee forward',
       'Slide other leg back, keeping hips square',
@@ -494,7 +516,8 @@ const EXERCISES = [
     name: 'Standing Hamstring Stretch',
     category: 'stretch',
     muscles: ['Hamstrings', 'Calves'],
-    image: null,
+    image: '/fitness-app/images/exercises/hamstring_stretch.svg',
+    video: 'https://www.youtube.com/watch?v=FDwpEdxZ4H4',
     steps: [
       'Stand and place one heel on low surface',
       'Keep leg straight, toes pointed up',
@@ -517,7 +540,8 @@ const EXERCISES = [
     name: 'Standing Quad Stretch',
     category: 'stretch',
     muscles: ['Quadriceps', 'Hip Flexors'],
-    image: null,
+    image: '/fitness-app/images/exercises/quad_stretch.svg',
+    video: 'https://www.youtube.com/watch?v=Ik8YJzhttFE',
     steps: [
       'Stand on one leg, hold wall for balance',
       'Grab opposite ankle behind you',
@@ -540,7 +564,8 @@ const EXERCISES = [
     name: 'Calf Stretch',
     category: 'stretch',
     muscles: ['Calves', 'Achilles'],
-    image: null,
+    image: '/fitness-app/images/exercises/calf_stretch.svg',
+    video: 'https://www.youtube.com/watch?v=y01ri_43G50',
     steps: [
       'Stand facing wall, hands on wall',
       'Step one foot back, keeping heel down',
@@ -563,7 +588,8 @@ const EXERCISES = [
     name: 'Cross-Body Shoulder Stretch',
     category: 'stretch',
     muscles: ['Shoulders', 'Upper Back'],
-    image: null,
+    image: '/fitness-app/images/exercises/shoulder_stretch.svg',
+    video: 'https://www.youtube.com/watch?v=h_5_0zAzU5Y',
     steps: [
       'Bring one arm across chest',
       'Use other hand to pull arm closer',
@@ -586,7 +612,8 @@ const EXERCISES = [
     name: 'Doorway Chest Stretch',
     category: 'stretch',
     muscles: ['Chest', 'Shoulders'],
-    image: null,
+    image: '/fitness-app/images/exercises/chest_stretch.svg',
+    video: 'https://www.youtube.com/watch?v=h4M4XmCBFd8',
     steps: [
       'Stand in doorway, forearm on frame',
       'Elbow at shoulder height',
@@ -609,7 +636,8 @@ const EXERCISES = [
     name: 'Cat-Cow Stretch',
     category: 'stretch',
     muscles: ['Spine', 'Core', 'Shoulders'],
-    image: null,
+    image: '/fitness-app/images/exercises/cat_cow.svg',
+    video: 'https://www.youtube.com/watch?v=kqnua4rHVVA',
     steps: [
       'Start on hands and knees',
       'Inhale, drop belly, lift head (Cow)',
@@ -632,7 +660,8 @@ const EXERCISES = [
     name: 'Ankle Circles',
     category: 'stretch',
     muscles: ['Ankles', 'Calves'],
-    image: null,
+    image: '/fitness-app/images/exercises/ankle_circles.svg',
+    video: 'https://www.youtube.com/watch?v=mzTQGYGI0Ng',
     steps: [
       'Sit or stand on one leg',
       'Lift one foot off ground',
@@ -655,7 +684,8 @@ const EXERCISES = [
     name: 'World\'s Greatest Stretch',
     category: 'stretch',
     muscles: ['Hip Flexors', 'Hamstrings', 'Thoracic Spine', 'Glutes'],
-    image: null,
+    image: '/fitness-app/images/exercises/world_greatest_stretch.svg',
+    video: 'https://www.youtube.com/watch?v=_kW3RTmwufc',
     steps: [
       'Start in push-up position',
       'Step right foot outside right hand',
@@ -678,7 +708,8 @@ const EXERCISES = [
     name: 'Leg Swings',
     category: 'stretch',
     muscles: ['Hip Flexors', 'Hamstrings', 'Adductors'],
-    image: null,
+    image: '/fitness-app/images/exercises/leg_swing.svg',
+    video: 'https://www.youtube.com/watch?v=korxBhGzzJE',
     steps: [
       'Stand sideways to wall, hand on wall for balance',
       'Swing inside leg forward and back',
@@ -708,6 +739,7 @@ const PROGRAMS = [
     duration: '8 weeks',
     frequency: '3x/week',
     icon: 'running',
+    headerImage: '/fitness-app/images/programs/running.svg',
     schedule: [
       {
         week: 1,
@@ -783,6 +815,7 @@ const PROGRAMS = [
     duration: '8 weeks',
     frequency: '4x/week',
     icon: 'running',
+    headerImage: '/fitness-app/images/programs/running.svg',
     schedule: [
       {
         week: 1,
@@ -866,6 +899,7 @@ const PROGRAMS = [
     duration: '12 weeks',
     frequency: '4x/week',
     icon: 'running',
+    headerImage: '/fitness-app/images/programs/running.svg',
     schedule: [
       {
         week: 1,
@@ -986,6 +1020,7 @@ const PROGRAMS = [
     duration: '6 weeks',
     frequency: '3x/week',
     icon: 'trail',
+    headerImage: '/fitness-app/images/programs/trail.svg',
     schedule: [
       {
         week: 1,
@@ -1045,6 +1080,7 @@ const PROGRAMS = [
     duration: '6 weeks',
     frequency: '3x/week',
     icon: 'trail',
+    headerImage: '/fitness-app/images/programs/trail.svg',
     schedule: [
       {
         week: 1,
@@ -1104,6 +1140,7 @@ const PROGRAMS = [
     duration: '4 weeks',
     frequency: '3x/week',
     icon: 'trail',
+    headerImage: '/fitness-app/images/programs/trail.svg',
     schedule: [
       {
         week: 1,
@@ -1147,6 +1184,7 @@ const PROGRAMS = [
     duration: '6 weeks',
     frequency: '4x/week',
     icon: 'trail',
+    headerImage: '/fitness-app/images/programs/trail.svg',
     schedule: [
       {
         week: 1,
@@ -1213,6 +1251,7 @@ const PROGRAMS = [
     duration: '8 weeks',
     frequency: '3x/week',
     icon: 'weights',
+    headerImage: '/fitness-app/images/programs/weights.svg',
     schedule: [
       {
         week: 1,
@@ -1288,6 +1327,7 @@ const PROGRAMS = [
     duration: '8 weeks',
     frequency: '4x/week',
     icon: 'weights',
+    headerImage: '/fitness-app/images/programs/weights.svg',
     schedule: [
       {
         week: 1,
@@ -1371,6 +1411,7 @@ const PROGRAMS = [
     duration: '8 weeks',
     frequency: '2x/week',
     icon: 'weights',
+    headerImage: '/fitness-app/images/programs/weights.svg',
     schedule: [
       {
         week: 1,
@@ -1439,6 +1480,7 @@ const PROGRAMS = [
     duration: 'Ongoing',
     frequency: 'Before runs',
     icon: 'mobility',
+    headerImage: '/fitness-app/images/programs/mobility.svg',
     schedule: [
       {
         week: 1,
@@ -1458,6 +1500,7 @@ const PROGRAMS = [
     duration: 'Ongoing',
     frequency: 'After runs',
     icon: 'mobility',
+    headerImage: '/fitness-app/images/programs/mobility.svg',
     schedule: [
       {
         week: 1,
@@ -1477,6 +1520,7 @@ const PROGRAMS = [
     duration: '4 weeks',
     frequency: '3x/week',
     icon: 'mobility',
+    headerImage: '/fitness-app/images/programs/mobility.svg',
     schedule: [
       {
         week: 1,
@@ -1520,6 +1564,7 @@ const PROGRAMS = [
     duration: 'Ongoing',
     frequency: '2-3x/week',
     icon: 'mobility',
+    headerImage: '/fitness-app/images/programs/mobility.svg',
     schedule: [
       {
         week: 1,

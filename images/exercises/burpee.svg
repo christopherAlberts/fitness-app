@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <rect width="200" height="150" fill="#1a1a24"/>
+  <!-- Ground line -->
+  <line x1="20" y1="140" x2="180" y2="140" stroke="#3f3f46" stroke-width="2"/>
+  <!-- Person jumping up -->
+  <g stroke="#6366f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head -->
+    <circle cx="100" cy="25" r="10" fill="#4f46e5"/>
+    <!-- Torso -->
+    <line x1="100" y1="35" x2="100" y2="70"/>
+    <!-- Arms overhead -->
+    <line x1="100" y1="40" x2="75" y2="20"/>
+    <line x1="100" y1="40" x2="125" y2="20"/>
+    <!-- Legs together, off ground -->
+    <line x1="100" y1="70" x2="95" y2="95"/>
+    <line x1="95" y1="95" x2="90" y2="115"/>
+    <circle cx="90" cy="115" r="3" fill="#6366f1"/>
+    <line x1="100" y1="70" x2="105" y2="95"/>
+    <line x1="105" y1="95" x2="110" y2="115"/>
+    <circle cx="110" cy="115" r="3" fill="#6366f1"/>
+  </g>
+  <!-- Jump indicator - gap from ground -->
+  <path d="M85 130 L85 120 M80 125 L85 120 L90 125" stroke="#10b981" stroke-width="2" fill="none"/>
+  <path d="M115 130 L115 120 M110 125 L115 120 L120 125" stroke="#10b981" stroke-width="2" fill="none"/>
+  <!-- Explosion effect -->
+  <circle cx="100" cy="135" r="8" stroke="#10b981" stroke-width="1" fill="none" stroke-dasharray="3,3"/>
+  <!-- Phase indicators -->
+  <text x="30" y="135" fill="#71717a" font-size="8" font-family="sans-serif">squat</text>
+  <text x="160" y="135" fill="#71717a" font-size="8" font-family="sans-serif">jump!</text>
+</svg>

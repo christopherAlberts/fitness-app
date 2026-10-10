@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <rect width="200" height="150" fill="#1a1a24"/>
+  <!-- Ground/mat -->
+  <rect x="20" y="115" width="160" height="6" rx="2" fill="#3f3f46"/>
+  <!-- Cat position (top) - rounded back -->
+  <g stroke="#6366f1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6">
+    <!-- Head tucked -->
+    <circle cx="55" cy="55" r="8" fill="#4f46e5"/>
+    <!-- Rounded spine -->
+    <path d="M62 55 Q100 30 138 55" fill="none"/>
+    <!-- Arms -->
+    <line x1="70" y1="50" x2="70" y2="70"/>
+    <line x1="130" y1="50" x2="130" y2="70"/>
+  </g>
+  <!-- Cow position (bottom) - arched back -->
+  <g stroke="#6366f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head up -->
+    <circle cx="50" cy="80" r="9" fill="#4f46e5"/>
+    <!-- Arched spine (dipped) -->
+    <path d="M58 82 Q100 100 142 82" fill="none"/>
+    <!-- Arms -->
+    <line x1="70" y1="90" x2="70" y2="113"/>
+    <circle cx="70" cy="113" r="3" fill="#6366f1"/>
+    <line x1="130" y1="90" x2="130" y2="113"/>
+    <circle cx="130" cy="113" r="3" fill="#6366f1"/>
+    <!-- Knees -->
+    <line x1="142" y1="82" x2="145" y2="100"/>
+    <line x1="145" y1="100" x2="145" y2="113"/>
+    <circle cx="145" cy="113" r="3" fill="#6366f1"/>
+  </g>
+  <!-- Movement arrows -->
+  <path d="M100 45 L100 35 M95 40 L100 35 L105 40" stroke="#10b981" stroke-width="2" fill="none"/>
+  <path d="M100 105 L100 95 M95 100 L100 95 L105 100" stroke="#10b981" stroke-width="2" fill="none"/>
+  <!-- Labels -->
+  <text x="170" y="45" fill="#71717a" font-size="8" font-family="sans-serif">CAT</text>
+  <text x="170" y="90" fill="#71717a" font-size="8" font-family="sans-serif">COW</text>
+</svg>

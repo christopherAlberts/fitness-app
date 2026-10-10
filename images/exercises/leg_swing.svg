@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <rect width="200" height="150" fill="#1a1a24"/>
+  <!-- Ground line -->
+  <line x1="20" y1="140" x2="180" y2="140" stroke="#3f3f46" stroke-width="2"/>
+  <!-- Wall for support -->
+  <rect x="35" y="30" width="5" height="110" fill="#3f3f46"/>
+  <!-- Person doing leg swings -->
+  <g stroke="#6366f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head -->
+    <circle cx="75" cy="35" r="10" fill="#4f46e5"/>
+    <!-- Torso upright -->
+    <line x1="75" y1="45" x2="75" y2="85"/>
+    <!-- Arm on wall -->
+    <line x1="75" y1="55" x2="50" y2="55"/>
+    <line x1="50" y1="55" x2="40" y2="60"/>
+    <!-- Other arm out for balance -->
+    <line x1="75" y1="55" x2="100" y2="50"/>
+    <!-- Standing leg -->
+    <line x1="75" y1="85" x2="70" y2="115"/>
+    <line x1="70" y1="115" x2="65" y2="138"/>
+    <circle cx="65" cy="138" r="4" fill="#6366f1"/>
+    <!-- Swinging leg - forward position (ghost) -->
+    <line x1="75" y1="85" x2="120" y2="65" stroke-opacity="0.4"/>
+    <line x1="120" y1="65" x2="140" y2="60" stroke-opacity="0.4"/>
+    <!-- Swinging leg - back position (ghost) -->
+    <line x1="75" y1="85" x2="50" y2="105" stroke-opacity="0.4"/>
+    <line x1="50" y1="105" x2="35" y2="115" stroke-opacity="0.4"/>
+    <!-- Swinging leg - middle/current -->
+    <line x1="75" y1="85" x2="95" y2="85"/>
+    <line x1="95" y1="85" x2="115" y2="90"/>
+    <circle cx="115" cy="90" r="4" fill="#6366f1"/>
+  </g>
+  <!-- Swing arc -->
+  <path d="M35 115 Q85 50 145 60" stroke="#10b981" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+  <!-- Direction arrows -->
+  <path d="M130 55 L140 50" stroke="#10b981" stroke-width="2" fill="none"/>
+  <path d="M135 52 L140 50 L138 45" stroke="#10b981" stroke-width="2" fill="none"/>
+</svg>

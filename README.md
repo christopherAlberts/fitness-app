@@ -1,4 +1,4 @@
-# FitFlow - Fitness PWA
+# Fitness App
 
 A polished, installable fitness Progressive Web App (PWA) designed for Christopher in George, South Africa. Built for running, trail running, weightlifting, and mobility training.
 
@@ -16,6 +16,8 @@ A polished, installable fitness Progressive Web App (PWA) designed for Christoph
   - Mobility/Stretching (Pre-Run Warm-up, Post-Run Stretches, Hip & Ankle Mobility, Full Body Mobility)
 - **Exercise Library** - Searchable and filterable exercise database with:
   - Categories: Upper Body, Lower Body, Core, Cardio, Stretches
+  - SVG illustrations for every exercise showing proper form
+  - "Watch How-to Video" links to reputable YouTube instructional videos
   - Each exercise includes how-to steps, cues, and common mistakes
 - **Workout Player** - Interactive workout execution with:
   - Timer for intervals, holds, and rest periods
@@ -96,7 +98,8 @@ To deploy this app to GitHub Pages:
 
 ## Attribution
 
-Exercise database structure inspired by [wger.de](https://wger.de/) (CC-BY-SA).
+- Exercise illustrations: Original SVG artwork created for this app
+- How-to videos: Links to reputable YouTube fitness channels
 
 ## License
 

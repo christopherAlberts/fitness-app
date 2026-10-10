@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" fill="none">
+  <rect width="200" height="150" fill="#1a1a24"/>
+  <!-- Ground line -->
+  <line x1="20" y1="120" x2="180" y2="120" stroke="#3f3f46" stroke-width="2"/>
+  <!-- Person in mountain climber position -->
+  <g stroke="#6366f1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Head -->
+    <circle cx="50" cy="55" r="10" fill="#4f46e5"/>
+    <!-- Torso in plank angle -->
+    <line x1="58" y1="60" x2="120" y2="80"/>
+    <!-- Arms straight -->
+    <line x1="65" y1="63" x2="60" y2="90"/>
+    <line x1="60" y1="90" x2="55" y2="118"/>
+    <circle cx="55" cy="118" r="3" fill="#6366f1"/>
+    <line x1="85" y1="70" x2="90" y2="95"/>
+    <line x1="90" y1="95" x2="90" y2="118"/>
+    <circle cx="90" cy="118" r="3" fill="#6366f1"/>
+    <!-- Front knee driving forward -->
+    <line x1="120" y1="80" x2="100" y2="70"/>
+    <line x1="100" y1="70" x2="80" y2="85"/>
+    <!-- Back leg extended -->
+    <line x1="120" y1="80" x2="155" y2="95"/>
+    <line x1="155" y1="95" x2="175" y2="118"/>
+    <circle cx="175" cy="118" r="3" fill="#6366f1"/>
+  </g>
+  <!-- Knee drive motion -->
+  <path d="M75 95 Q65 85 80 75" stroke="#10b981" stroke-width="2" fill="none"/>
+  <path d="M77 78 L80 72 L84 77" stroke="#10b981" stroke-width="2" fill="none"/>
+  <!-- Speed lines -->
+  <line x1="95" y1="75" x2="105" y2="75" stroke="#10b981" stroke-width="1.5"/>
+  <line x1="93" y1="80" x2="100" y2="80" stroke="#10b981" stroke-width="1.5"/>
+</svg>
