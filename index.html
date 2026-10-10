@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="description" content="FitFlow - Your personal fitness companion for running, trail running, weightlifting and mobility training">
+  <meta name="theme-color" content="#6366f1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="FitFlow">
+  
+  <title>FitFlow - Fitness Tracker</title>
+  
+  <link rel="manifest" href="/fitness-app/manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="/fitness-app/icons/icon-32.png">
+  <link rel="apple-touch-icon" href="/fitness-app/icons/icon-192.png">
+  
+  <link rel="stylesheet" href="/fitness-app/css/styles.css">
+  <link rel="stylesheet" href="/fitness-app/css/components.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Main Navigation -->
+    <nav class="bottom-nav" id="bottomNav">
+      <button class="nav-item active" data-screen="today">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>Today</span>
+      </button>
+      <button class="nav-item" data-screen="programs">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+        <span>Programs</span>
+      </button>
+      <button class="nav-item" data-screen="exercises">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6.5 6.5h11"/>
+          <path d="M6.5 17.5h11"/>
+          <path d="M4 6.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+          <path d="M20 22a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+          <path d="M4 22a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+          <path d="M20 6.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+        </svg>
+        <span>Exercises</span>
+      </button>
+      <button class="nav-item" data-screen="progress">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 3v18h18"/>
+          <path d="M18 17l-5-5-4 4-3-3"/>
+        </svg>
+        <span>Progress</span>
+      </button>
+    </nav>
+
+    <!-- Screens Container -->
+    <main class="screens-container">
+      <!-- Today Screen -->
+      <section id="today-screen" class="screen active">
+        <header class="screen-header">
+          <div class="header-content">
+            <h1 class="greeting" id="greeting">Good morning</h1>
+            <p class="subtitle" id="dateDisplay">Today's workout</p>
+          </div>
+          <button class="icon-btn" id="settingsBtn" aria-label="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </button>
+        </header>
+
+        <div class="screen-content">
+          <!-- Current Program Card -->
+          <div id="currentProgramCard" class="card program-card hidden">
+            <div class="card-badge">Active Program</div>
+            <h2 class="card-title" id="currentProgramName">-</h2>
+            <p class="card-subtitle" id="currentProgramProgress">Week 1 of 8</p>
+            <div class="progress-bar">
+              <div class="progress-fill" id="programProgressBar" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <!-- Today's Session Card -->
+          <div id="todaySessionCard" class="card session-card">
+            <div class="session-header">
+              <div class="session-icon" id="sessionIcon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 8v4l3 3"/>
+                </svg>
+              </div>
+              <div class="session-info">
+                <h3 class="session-title" id="sessionTitle">No workout scheduled</h3>
+                <p class="session-details" id="sessionDetails">Start a program or quick workout</p>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-large" id="startSessionBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+              Start Workout
+            </button>
+          </div>
+
+          <!-- Quick Start Section -->
+          <div class="section">
+            <h2 class="section-title">Quick Start</h2>
+            <div class="quick-start-grid">
+              <button class="quick-start-card" data-type="run">
+                <div class="quick-icon run">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 4v16"/>
+                    <path d="M17 4v16"/>
+                    <path d="M19 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14"/>
+                    <circle cx="9" cy="9" r="2"/>
+                  </svg>
+                </div>
+                <span>Road Run</span>
+              </button>
+              <button class="quick-start-card" data-type="trail">
+                <div class="quick-icon trail">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 3L4 7l4 4"/>
+                    <path d="M4 7h10"/>
+                    <path d="M16 21l4-4-4-4"/>
+                    <path d="M20 17H10"/>
+                  </svg>
+                </div>
+                <span>Trail Run</span>
+              </button>
+              <button class="quick-start-card" data-type="weights">
+                <div class="quick-icon weights">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6.5 6.5h11"/>
+                    <path d="M6.5 17.5h11"/>
+                    <rect x="2" y="4" width="4" height="6" rx="1"/>
+                    <rect x="18" y="4" width="4" height="6" rx="1"/>
+                    <rect x="2" y="14" width="4" height="6" rx="1"/>
+                    <rect x="18" y="14" width="4" height="6" rx="1"/>
+                  </svg>
+                </div>
+                <span>Weights</span>
+              </button>
+              <button class="quick-start-card" data-type="stretch">
+                <div class="quick-icon stretch">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="5" r="2"/>
+                    <path d="M12 7v6"/>
+                    <path d="M9 21l3-8 3 8"/>
+                    <path d="M6 11l6 2 6-2"/>
+                  </svg>
+                </div>
+                <span>Stretch</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Stats Summary -->
+          <div class="section">
+            <h2 class="section-title">This Week</h2>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-value" id="weekWorkouts">0</div>
+                <div class="stat-label">Workouts</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="weekDistance">0</div>
+                <div class="stat-label">km Run</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="weekStreak">0</div>
+                <div class="stat-label">Day Streak</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Programs Screen -->
+      <section id="programs-screen" class="screen">
+        <header class="screen-header">
+          <h1>Programs</h1>
+        </header>
+        <div class="screen-content">
+          <div class="tabs" id="programTabs">
+            <button class="tab active" data-category="all">All</button>
+            <button class="tab" data-category="running">Running</button>
+            <button class="tab" data-category="trail">Trail</button>
+            <button class="tab" data-category="weights">Weights</button>
+            <button class="tab" data-category="mobility">Mobility</button>
+          </div>
+          <div class="programs-list" id="programsList">
+            <!-- Programs will be rendered here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Exercises Screen -->
+      <section id="exercises-screen" class="screen">
+        <header class="screen-header">
+          <h1>Exercises</h1>
+        </header>
+        <div class="screen-content">
+          <div class="search-bar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input type="search" id="exerciseSearch" placeholder="Search exercises...">
+          </div>
+          <div class="filter-chips" id="exerciseFilters">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="upper">Upper Body</button>
+            <button class="chip" data-filter="lower">Lower Body</button>
+            <button class="chip" data-filter="core">Core</button>
+            <button class="chip" data-filter="cardio">Cardio</button>
+            <button class="chip" data-filter="stretch">Stretches</button>
+          </div>
+          <div class="exercises-grid" id="exercisesList">
+            <!-- Exercises will be rendered here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Progress Screen -->
+      <section id="progress-screen" class="screen">
+        <header class="screen-header">
+          <h1>Progress</h1>
+        </header>
+        <div class="screen-content">
+          <div class="streak-card">
+            <div class="streak-flame">🔥</div>
+            <div class="streak-info">
+              <div class="streak-count" id="currentStreak">0</div>
+              <div class="streak-label">Day Streak</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Weekly Volume</h2>
+            <div class="chart-container">
+              <canvas id="volumeChart"></canvas>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2 class="section-title">Running Distance</h2>
+            <div class="chart-container">
+              <canvas id="distanceChart"></canvas>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-header">
+              <h2 class="section-title">Workout History</h2>
+            </div>
+            <div class="history-list" id="historyList">
+              <!-- History items will be rendered here -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Workout Player Modal -->
+    <div id="workoutPlayer" class="modal hidden">
+      <div class="modal-content workout-player-content">
+        <header class="player-header">
+          <button class="icon-btn" id="closePlayer" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+          </button>
+          <h2 id="playerWorkoutName">Workout</h2>
+          <button class="icon-btn" id="playerSettings" aria-label="Settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="1"/>
+              <circle cx="19" cy="12" r="1"/>
+              <circle cx="5" cy="12" r="1"/>
+            </svg>
+          </button>
+        </header>
+
+        <div class="player-progress">
+          <div class="player-progress-bar">
+            <div class="player-progress-fill" id="playerProgressFill"></div>
+          </div>
+          <div class="player-progress-text">
+            <span id="playerCurrentExercise">1</span> / <span id="playerTotalExercises">10</span>
+          </div>
+        </div>
+
+        <div class="player-main">
+          <div class="exercise-display" id="exerciseDisplay">
+            <div class="exercise-image" id="exerciseImage"></div>
+            <h3 class="exercise-name" id="exerciseName">Exercise Name</h3>
+            <p class="exercise-instruction" id="exerciseInstruction">Instructions here</p>
+          </div>
+
+          <div class="timer-display hidden" id="timerDisplay">
+            <div class="timer-circle">
+              <svg class="timer-svg" viewBox="0 0 100 100">
+                <circle class="timer-bg" cx="50" cy="50" r="45"/>
+                <circle class="timer-progress" id="timerCircle" cx="50" cy="50" r="45"/>
+              </svg>
+              <div class="timer-text" id="timerText">0:00</div>
+            </div>
+            <p class="timer-label" id="timerLabel">Rest</p>
+          </div>
+
+          <div class="set-tracker" id="setTracker">
+            <div class="set-info">
+              <span class="set-label">Set</span>
+              <span class="set-current" id="setCurrentDisplay">1</span>
+              <span class="set-separator">/</span>
+              <span class="set-total" id="setTotalDisplay">3</span>
+            </div>
+            <div class="rep-weight-inputs">
+              <div class="input-group">
+                <label>Reps</label>
+                <input type="number" id="repsInput" value="10" min="0" max="999">
+              </div>
+              <div class="input-group">
+                <label>Weight (kg)</label>
+                <input type="number" id="weightInput" value="0" min="0" max="999" step="0.5">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="player-controls">
+          <button class="btn btn-secondary" id="prevExerciseBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+            Previous
+          </button>
+          <button class="btn btn-primary btn-large" id="nextExerciseBtn">
+            Next
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exercise Detail Modal -->
+    <div id="exerciseDetailModal" class="modal hidden">
+      <div class="modal-content exercise-detail-content">
+        <header class="modal-header">
+          <button class="icon-btn" id="closeExerciseDetail" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+          </button>
+          <h2 id="exerciseDetailName">Exercise</h2>
+        </header>
+        <div class="modal-body">
+          <div class="exercise-detail-image" id="exerciseDetailImage"></div>
+          <div class="exercise-meta">
+            <span class="badge" id="exerciseDetailCategory">Category</span>
+            <span class="badge" id="exerciseDetailMuscles">Muscles</span>
+          </div>
+          <div class="exercise-section">
+            <h3>How to Perform</h3>
+            <ol class="exercise-steps" id="exerciseDetailSteps"></ol>
+          </div>
+          <div class="exercise-section">
+            <h3>Key Cues</h3>
+            <ul class="exercise-cues" id="exerciseDetailCues"></ul>
+          </div>
+          <div class="exercise-section">
+            <h3>Common Mistakes</h3>
+            <ul class="exercise-mistakes" id="exerciseDetailMistakes"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Program Detail Modal -->
+    <div id="programDetailModal" class="modal hidden">
+      <div class="modal-content program-detail-content">
+        <header class="modal-header">
+          <button class="icon-btn" id="closeProgramDetail" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+          </button>
+          <h2 id="programDetailName">Program</h2>
+        </header>
+        <div class="modal-body">
+          <div class="program-detail-header">
+            <p class="program-description" id="programDetailDescription"></p>
+            <div class="program-meta">
+              <span class="meta-item" id="programDetailDuration">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                8 weeks
+              </span>
+              <span class="meta-item" id="programDetailFrequency">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                3x/week
+              </span>
+            </div>
+          </div>
+          <div class="program-schedule" id="programDetailSchedule"></div>
+          <button class="btn btn-primary btn-large btn-full" id="startProgramBtn">Start Program</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal hidden">
+      <div class="modal-content settings-content">
+        <header class="modal-header">
+          <button class="icon-btn" id="closeSettings" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+          </button>
+          <h2>Settings</h2>
+        </header>
+        <div class="modal-body">
+          <div class="settings-group">
+            <h3>Appearance</h3>
+            <div class="setting-item">
+              <span>Dark Mode</span>
+              <label class="toggle">
+                <input type="checkbox" id="darkModeToggle" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+          <div class="settings-group">
+            <h3>Data</h3>
+            <button class="btn btn-secondary btn-full" id="exportDataBtn">Export Data</button>
+            <button class="btn btn-danger btn-full" id="clearDataBtn">Clear All Data</button>
+          </div>
+          <div class="settings-group">
+            <h3>About</h3>
+            <p class="settings-text">FitFlow v1.0.0</p>
+            <p class="settings-text small">Made for Christopher in George, South Africa</p>
+            <p class="settings-text small">Exercise images from wger.de (CC-BY-SA)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+  </div>
+
+  <script src="/fitness-app/js/data.js"></script>
+  <script src="/fitness-app/js/storage.js"></script>
+  <script src="/fitness-app/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/fitness-app/sw.js', { scope: '/fitness-app/' })
+          .then(registration => {
+            console.log('ServiceWorker registered:', registration.scope);
+          })
+          .catch(error => {
+            console.log('ServiceWorker registration failed:', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>
