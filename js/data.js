@@ -541,7 +541,7 @@ const EXERCISES = [
     category: 'stretch',
     muscles: ['Quadriceps', 'Hip Flexors'],
     image: '/fitness-app/images/exercises/quad_stretch.svg',
-    video: 'https://www.youtube.com/watch?v=t2TxNsNOvOA',
+    video: 'https://www.youtube.com/watch?v=Ik8YJzhttFE',
     steps: [
       'Stand on one leg, hold wall for balance',
       'Grab opposite ankle behind you',
@@ -565,7 +565,7 @@ const EXERCISES = [
     category: 'stretch',
     muscles: ['Calves', 'Achilles'],
     image: '/fitness-app/images/exercises/calf_stretch.svg',
-    video: 'https://www.youtube.com/watch?v=k1-slliPE6k',
+    video: 'https://www.youtube.com/watch?v=y01ri_43G50',
     steps: [
       'Stand facing wall, hands on wall',
       'Step one foot back, keeping heel down',
@@ -589,7 +589,7 @@ const EXERCISES = [
     category: 'stretch',
     muscles: ['Shoulders', 'Upper Back'],
     image: '/fitness-app/images/exercises/shoulder_stretch.svg',
-    video: 'https://www.youtube.com/watch?v=oEx0bCRV5a4',
+    video: 'https://www.youtube.com/watch?v=h_5_0zAzU5Y',
     steps: [
       'Bring one arm across chest',
       'Use other hand to pull arm closer',
@@ -613,7 +613,7 @@ const EXERCISES = [
     category: 'stretch',
     muscles: ['Chest', 'Shoulders'],
     image: '/fitness-app/images/exercises/chest_stretch.svg',
-    video: 'https://www.youtube.com/watch?v=i_J6L6E_jbw',
+    video: 'https://www.youtube.com/watch?v=h4M4XmCBFd8',
     steps: [
       'Stand in doorway, forearm on frame',
       'Elbow at shoulder height',
@@ -661,7 +661,7 @@ const EXERCISES = [
     category: 'stretch',
     muscles: ['Ankles', 'Calves'],
     image: '/fitness-app/images/exercises/ankle_circles.svg',
-    video: 'https://www.youtube.com/watch?v=ip3SKDdz7sI',
+    video: 'https://www.youtube.com/watch?v=mzTQGYGI0Ng',
     steps: [
       'Sit or stand on one leg',
       'Lift one foot off ground',
@@ -685,7 +685,7 @@ const EXERCISES = [
     category: 'stretch',
     muscles: ['Hip Flexors', 'Hamstrings', 'Thoracic Spine', 'Glutes'],
     image: '/fitness-app/images/exercises/world_greatest_stretch.svg',
-    video: 'https://www.youtube.com/watch?v=JRcuG_mLjZc',
+    video: 'https://www.youtube.com/watch?v=_kW3RTmwufc',
     steps: [
       'Start in push-up position',
       'Step right foot outside right hand',
