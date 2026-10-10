@@ -1,0 +1,90 @@
+{
+  "name": "FitFlow - Fitness Tracker",
+  "short_name": "FitFlow",
+  "description": "Your personal fitness companion for running, trail running, weightlifting and mobility training",
+  "start_url": "/fitness-app/",
+  "scope": "/fitness-app/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/fitness-app/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fitness-app/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fitness-app/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fitness-app/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fitness-app/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fitness-app/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fitness-app/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fitness-app/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fitness-app/icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/fitness-app/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["fitness", "health", "sports"],
+  "shortcuts": [
+    {
+      "name": "Today's Workout",
+      "short_name": "Today",
+      "description": "View today's scheduled workout",
+      "url": "/fitness-app/#today",
+      "icons": [{ "src": "/fitness-app/icons/icon-96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Programs",
+      "short_name": "Programs",
+      "description": "Browse training programs",
+      "url": "/fitness-app/#programs",
+      "icons": [{ "src": "/fitness-app/icons/icon-96.png", "sizes": "96x96" }]
+    }
+  ]
+}
